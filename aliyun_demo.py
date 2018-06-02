@@ -12,7 +12,7 @@ import aliyun.api
 注意：默认的只需要设置一次就可以了
 
 '''
-aliyun.setDefaultAppInfo("accessKeyId", "accessKeySecret")
+aliyun.setDefaultAppInfo("24533259", "58e00610ceeaafed2d8ba7ab59c2d3ac")
 
 '''
 使用自定义的域名和端口（测试沙箱环境使用）
@@ -26,7 +26,7 @@ a = aliyun.api.Rds20130528DescribeDBInstancesRequest()
 
 '''
 
-a = aliyun.api.Rds20130528DescribeDBInstancesRequest()
+a = aliyun.api.Rds20130528DescribeDBInstancesRequest("gw.api.tbsandbox.com/router/rest")
 
 '''
 可以在运行期替换掉默认的appkey和secret的设置
@@ -38,6 +38,6 @@ try:
     print("begin");
     f= a.getResponse()
     print(f)
-except Exception,e:
+except Exception as e:
     print(e)
     
